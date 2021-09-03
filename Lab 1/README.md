@@ -70,6 +70,11 @@ The interactive device can be anything *except* a computer, a tablet computer or
 
 \*\***Describe your setting, players, activity and goals here.**\*\*
 
+ - _Setting:_ Any indoor environment where one would keep a potted plant, e.g. inside a home or office. The device is located inside a plant pot.
+ - _Players:_ Anyone who uses the space. For example, tenants of an apartment or employees in an office space. 
+ - _Activity:_ When the first two inches of soil in the pot are dry, the device lights up, indicating that the plant needs to be watered.
+ - _Goals:_ The goal of the players is to water their potted plants only when they need water (i.e. first two inches of soil are dry) in order to avoid either overwatering or underwatering the plants in the space. 
+
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 
 \*\***Include a picture of your storyboard here**\*\*
