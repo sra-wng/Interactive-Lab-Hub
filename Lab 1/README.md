@@ -92,9 +92,7 @@ Feedback received:
 
 Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
 
-\*\***Are there things that seemed better on paper than acted out?**\*\*
-
-\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+After acting out the interaction, I need to make sure the device is waterproof since the device will be located in the plant pot. On paper, the idea was that the device could be placed in any plant pot, but after acting out the interaction with my phone, it's evident that I need to make sure the plant pot is an appropriate size to make sure the device fits in the pot and to avoid the pot tipping over.
 
 
 ## Part C. Prototype the device
