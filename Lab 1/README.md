@@ -56,17 +56,7 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 
 ## Part A. Plan 
 
-To stage the interaction with your interactive device, think about:
-
-_Setting:_ Where is this interaction happening? (e.g., a jungle, the kitchen) When is it happening?
-
-_Players:_ Who is involved in the interaction? Who else is there? If you reflect on the design of current day interactive devices like the Amazon Alexa, it’s clear they didn’t take into account people who had roommates, or the presence of children. Think through all the people who are in the setting.
-
-_Activity:_ What is happening between the actors?
-
-_Goals:_ What are the goals of each player? (e.g., jumping to a tree, opening the fridge). 
-
-The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
+\*\***Describe your setting, players, activity and goals here.**\*\*
 
 Planning my device:
  - _Setting:_ Any indoor environment where one would keep a potted plant, e.g. inside a home or office. The device is located inside a plant pot.
@@ -74,68 +64,78 @@ Planning my device:
  - _Activity:_ When the first two inches of soil in the pot are dry, the device lights up, indicating that the plant needs to be watered.
  - _Goals:_ The goal of the players is to water their potted plants only when they need water (i.e. first two inches of soil are dry) in order to avoid either overwatering or underwatering the plants in the space. 
 
+\*\***Include a picture of your storyboard here**\*\*
 
-Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
+![storyboard](storyboard.png "Storyboard")
 
-![storyboard](lab1a_storyboard.png?raw=true "Storyboard")
+\*\***Summarize feedback you got here.**\*\*
 
-
-Present your idea to the other people in your breakout room. You can just get feedback from one another or you can work together on the other parts of the lab.
-
-Feedback received:
- - Different plants have different watering needs in terms of schedule and quantity.
+I presented my idea to Adam, JJ, and Daniel. Feedback received:
+ - Different plants have different watering needs in terms of schedule and quantity, so the device could be more customizable
  - Different frequency of flashing light or different color shades could be used to represent different levels of moisture in the soil.
  - Future work could incorporate other needs that plants have such as fertlizer.
 
 
 ## Part B. Act out the Interaction
 
-Try physically acting out the interaction you planned. For now, you can just pretend the device is doing the things you’ve scripted for it. 
+\*\***Are there things that seemed better on paper than acted out?**\*\*
 
-After acting out the interaction, I need to make sure the device is waterproof since the device will be located in the plant pot. On paper, the idea was that the device could be placed in any plant pot, but after acting out the interaction with my phone, it's evident that I need to make sure the plant pot is an appropriate size to make sure the device fits in the pot and to avoid the pot tipping over.
+The idea of using different shades of a color to indicate changing moisture level of the soil worked better on paper than acted out. In reality, having subtle/gradual shifts in color shades would be difficult to notice without a basis for comparison, since the device would only show a single color at a time. Additionally, on paper, the idea was that the device could be placed in any plant pot, but after acting out the interaction with my phone, it's evident that I need to make sure the plant pot is an appropriate size to make sure the device fits in the pot and to avoid the pot tipping over.
+
+\*\***Are there new ideas that occur to you or your collaborators that come up from the acting?**\*\*
+
+After acting out the interaction, I could instead use a single color, but use flashing lights to indicate priority of actions required. For example, consistent red light to indicate that the plant needs to be watered, but flashing red light to indicate urgency (e.g. the plant hasn't been watered for two weeks after the light originally came on). I also need to make sure the device is waterproof since the device will be located in the plant pot. 
 
 
 ## Part C. Prototype the device
 
-You will be using your smartphone as a stand-in for the device you are prototyping. You will use the browser of your smart phone to act as a “light” and use a remote control interface to remotely change the light on that device. 
-
-Code for the "Tinkerbelle" tool, and instructions for setting up the server and your phone are [here](https://github.com/FAR-Lab/tinkerbelle).
-
-We invented this tool for this lab! 
-
-If you run into technical issues with this tool, you can also use a light switch, dimmer, etc. that you can can manually or remotely control.
-
 \*\***Give us feedback on Tinkerbelle.**\*\*
 
+I ran into technical issues using Tinkerbelle, so instead used a [color-picker web app](http://color.aurlien.net/). 
 
 ## Part D. Wizard the device
-Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 \*\***Include your first attempts at recording the set-up video here.**\*\*
 
-Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
+Since I wasn't able to use Tinkerbelle, I created a Zoom meeting with my phone as one participant and my laptop as another participant. I then shared my laptop screen in the meeting so that the color picker app could be controlled from my laptop and displayed on my phone screen. See my [wizarding setup video](https://drive.google.com/file/d/13IFCEg6kqjbDAHrx17vgF_u3QHQSaYiY/view?usp=sharing).
 
 \*\***Show the follow-up work here.**\*\*
+
+For my initial paper prototype, the goal was to water the plant when the device displayed a red light. See my [initial interaction video](https://drive.google.com/file/d/1Mppsxm0C4Q7ociPwsPNEKLuSpo1amkKk/view?usp=sharing).
+
+I then changed my goal to have the user check the soil moisture level manually when the device started flashing the red light. See my [second interaction video](https://drive.google.com/file/d/1r7WZqxrW8B5Wjm6NsCE9SMl8csh3G4Wa/view?usp=sharing).
+
 
 
 ## Part E. Costume the device
 
-Only now should you start worrying about what the device should look like. Develop a costume so that you can use your phone as this device.
-
-Think about the setting of the device: is the environment a place where the device could overheat? Is water a danger? Does it need to have bright colors in an emergency setting?
-
 \*\***Include sketches of what your device might look like here.**\*\*
+
+My initial costume sketch:
+
+![costume_sketch](costume_sketch.png "Costume Sketch")
+
+The costume I created:
+
+![costume_without_phone](costume_no_phone.png "Costume Without Phone")
+
+![costume_front](costume_front.png "Costume Front View")
+
+![costume_back](costume_back.png "Costume Back View")
+
 
 \*\***What concerns or opportunitities are influencing the way you've designed the device to look?**\*\*
 
+I used a plastic sandwich bag, chopsticks, and packing tape to assemble the costume. My key concern was that the device needed to be prtoected from water so that it would not have to be removed from the plant, then re-inserted every time the user watered the plant. Wrapping the device in the sealed sandwich bag allowed me to protect the device will still allowing light from the screen to shine through unobstructed. Additionally, I wanted to make sure that the device would be able to catch the attention of someone who may not be as well-versed in checking the health and needs of their plant, while still maintaining keeping the device relatively simple to avoid visually taking over the plant. Attaching the device to the chopsticks allowed for greater stability and visibility of the device. 
 
 ## Part F. Record
 
 \*\***Take a video of your prototyped interaction.**\*\*
 
-\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
-Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
+See my [prototyped interaction video](https://drive.google.com/file/d/1y1wLhG1S0_EmyUPuJtHsOFo1i-D70u-r/view?usp=sharing).
 
+\*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+I worked with Adam (Yuzhen) Zhang, Daan van der Zwaag, JJ (Jiejun) Tian. My sister (not a CT student) helped me film the interaction videos!
 
 
 # Staging Interaction, Part 2 
