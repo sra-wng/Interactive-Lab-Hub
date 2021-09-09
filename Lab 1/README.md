@@ -70,7 +70,7 @@ Planning my device:
 
 \*\***Summarize feedback you got here.**\*\*
 
-I presented my idea to Adam, JJ, and Daniel. Feedback received:
+I presented my idea to Adam (Yuzhen) Zhang, Daan van der Zwaag, JJ (Jiejun) Tian. Feedback received:
  - Different plants have different watering needs in terms of schedule and quantity, so the device could be more customizable
  - Different frequency of flashing light or different color shades could be used to represent different levels of moisture in the soil.
  - Future work could incorporate other needs that plants have such as fertlizer.
@@ -135,6 +135,7 @@ I used a plastic sandwich bag, chopsticks, and packing tape to assemble the cost
 See my [prototyped interaction video](https://drive.google.com/file/d/1y1wLhG1S0_EmyUPuJtHsOFo1i-D70u-r/view?usp=sharing).
 
 \*\***Please indicate anyone you collaborated with on this Lab.**\*\*
+
 I worked with Adam (Yuzhen) Zhang, Daan van der Zwaag, JJ (Jiejun) Tian. My sister (not a CT student) helped me film the interaction videos!
 
 
