@@ -156,25 +156,22 @@ My idea was reviewed by Scarlett (Shiling) Zhang, Kristy Chen, and Gazi Inkiyad.
 
 ## Make it your own
 
-Do last week’s assignment again, but this time: 
-1) It doesn’t have to (just) use light, 
-2) You can use any modality (e.g., vibration, sound) to prototype the behaviors! Again, be creative!
-3) We will be grading with an emphasis on creativity. 
-
 \*\***Document everything here. (Particularly, we would like to see the storyboard and video, although photos of the prototype are also great.)**\*\*
 
-For my second iteration, I decided to focus on communicating the conditions of the plant needing water and the plant being overwatered. For a medium-sized plant (which will be my focus, given the size and weight of incorporating my phone into the device), a typical rule of thumb for checking whether a plant needs water is to stick your finger into the soil 1-2" and check if the soil feels damp. This tends to work for a variety of plants.
+For my second iteration, I decided to focus on communicating the conditions of the plant needing water and the plant being overwatered. For a medium-sized plant (which will be my focus, given the size and weight of incorporating my phone into the device), a typical rule of thumb for checking whether a plant needs water is to stick your finger into the soil 1-2" and check if the soil feels damp. This tends to work for a variety of plants. Rather than using a continuous red light and a blinking red light as I did originally, I decided to use a blue light to indicate watering is required and an orange light to indicate the plant has been overwatered and needs attention.
 
 Meyhaa Buvanesh and Rohan Reddy helped me come up with ideas for communicating the needs of the plant and determining what aspects to focus on. 
 
-My revised storyboards are included below. The first interaction goal is to water the plant when the blue light turns on to indicate the plant requires water. The second interaction goal is to check/re-pot/dry out the plant when the orange light turns on to indicate the plant is overwatered.
+My revised storyboards are included below. The first interaction goal is to water the plant when the blue light turns on to indicate the plant requires water. The second interaction goal is to check/re-pot/dry out the plant when the orange light turns on to indicate the plant is overwatered. 
 
 ![revised_storyboards](revised_storyboards.png "Revised Storyboards")
 
-The costuming/prototype design is primarily the same. I added a marker to indicate the segment of the stake that needs to be inserted into the soil (so that 2" is in soil).Rather than using a continuous and blinking red light, I use a blue light to indicate watering is required and an orange light to indicate the plant has been overwatered and needs attention.
+The costuming/prototype design is primarily the same. I added a marker to indicate the segment of the stake that needs to be inserted into the soil (so that 2" is in soil). 
 
 ![revised_costume](revised_costume.png "Revised Costume")
 
 To improve the wizarding with my new prototype, I opened multiple browser tabs on my laptop with the aurlien color picker app and switch between black (rgb #000000), blue (rgb #16b1ff), and orange (rgb #ff6416) screens while sharing my screen to my phone via zoom. Previously, I used a single screen while trying to select and adjust shading of the color live. By using tabs with pre-selected colors, the goal is to make sure that the intended color comes across clearly.
 
-See my [new prototyped interaction video]().
+See my new interaction videos below:
+- [Plant needs water](https://drive.google.com/file/d/1m31ypDZ0vr10aRAgHTuRIVOgNZW8n4bk/view?usp=sharing)
+- [Plant is overwatered](https://drive.google.com/file/d/1yES70AZ3VWdOBzfkjix2EuYxzhtVbyFp/view?usp=sharing)
