@@ -181,6 +181,8 @@ Can you make time interactive? You can look in `screen_test.py` for examples for
 
 \*\*\***A copy of your code should be in your Lab 2 Github repo.**\*\*\*
 
+The goal of my clock is to measure time based on a schedule for taking care of a pet dog. Increments of time throughout the day are measured based on when to feed and walk the dog. Any other time is considered rest or free time. See my_clock.py for my initial code.
+
 After you edit and work on the scripts for Lab 2, the files should be upload back to your own GitHub repo! You can push to your personal github repo by adding the files here, commiting and pushing.
 
 ```
@@ -197,9 +199,16 @@ After that, Git will ask you to login to your GitHub account to push the updates
 
 \*\*\***Take a video of your PiClock.**\*\*\*
 
+https://drive.google.com/file/d/1WvQFJxiPVgYts2IApx9IcSmG8Q64GzuZ/view?usp=sharing
+
 ## Part G. 
 ## Sketch and brainstorm further interactions and features you would like for your clock for Part 2.
 
+For part 2 I want to add the ability to press one of the buttons to mark a "food" or "walk" task as complete, and to skip ahead to the next "rest" block. The idea would be to provide the user greater flexibility and accuracy of the clock, given that their daily schedule for taking care of the dog may shift. I would also like to add the ability for a user to configure their own schedule, with the option to have different schedules on workdays and breakdays. The user would be able to press the other button to toggle between these two schedules.
+
+Sketches of these interactions:
+
+![sketches](sketches.png "Idea Sketches")
 
 # Prep for Part 2
 
