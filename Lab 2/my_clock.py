@@ -11,7 +11,7 @@ not support PIL/pillow (python imaging library)!
 Author(s): Melissa LeBlanc-Williams for Adafruit Industries
 """
 
-import digitalio
+#import digitalio
 import board
 from PIL import Image, ImageDraw
 import adafruit_rgb_display.ili9341 as ili9341
