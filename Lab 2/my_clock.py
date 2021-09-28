@@ -11,7 +11,7 @@ not support PIL/pillow (python imaging library)!
 Author(s): Melissa LeBlanc-Williams for Adafruit Industries
 """
 
-#import digitalio
+import digitalio
 import board
 from PIL import Image, ImageDraw
 import adafruit_rgb_display.ili9341 as ili9341
@@ -96,7 +96,7 @@ def load_image(filename):
         scaled_width = width
         scaled_height = image.height * width // image.width
     image = image.resize((scaled_width, scaled_height), Image.BICUBIC)
-    
+
     # Crop and center the image
     x = scaled_width // 2 - width // 2
     y = scaled_height // 2 - height // 2
@@ -109,28 +109,26 @@ backlight.switch_to_output()
 backlight.value = True
 
 food_img = load_image("food.jpeg")
-walk_img = load_image("walk.jpeg")
-rest_img = load_image("rest.jpeg")
+walk_img = load_image("walk1.jpeg")
+rest_img = load_image("home.jpeg")
 
 while True:
     now = datetime.datetime.now()
-    #now = now.replace(hour=9,minute=15,second=0,microsecond=0)
-    today8a = now.replace(hour=22,minute=32,second=10)
-    today9a = now.replace(hour=22,minute=32,second=20)
-    today830a = now.replace(hour=22,minute=32,second=15)
-    today930a = now.replace(hour=22,minute=32,second=25)
-    #today8a = now.replace(hour=8,minute=0,second=0,microsecond=0)
-    #today830a = now.replace(hour=8,minute=30,second=0,microsecond=0)
+    #now = now.replace(hour=9,minute=15,second=0,microsecond=0) # for testing walk
+    now = now.replace(hour=8,minute=15,second=0,microsecond=0) # for testing food
+    #now = now.replace(hour=8,minute=45,second=0,microsecond=0) # for testing rest
+    today8a = now.replace(hour=8,minute=0,second=0,microsecond=0)
+    today830a = now.replace(hour=8,minute=30,second=0,microsecond=0)
     today5p = now.replace(hour=17,minute=0,second=0,microsecond=0)
     today530p = now.replace(hour=17,minute=30,second=0,microsecond=0)
-    #today9a = now.replace(hour=9,minute=0,second=0,microsecond=0)
-    #today930a = now.replace(hour=9,minute=30,second=0,microsecond=0)
+    today9a = now.replace(hour=9,minute=0,second=0,microsecond=0)
+    today930a = now.replace(hour=9,minute=30,second=0,microsecond=0)
     today1p = now.replace(hour=13,minute=0,second=0,microsecond=0)
     today130p = now.replace(hour=13,minute=30,second=0,microsecond=0)
     today630p = now.replace(hour=18,minute=30,second=0,microsecond=0)
     today730p = now.replace(hour=19,minute=30,second=0,microsecond=0)
 
-    if (((now > today8a) and (now<=today830a)) or ((now>today5p) and (now<=today530p))):
+    if (((now>today8a) and (now<=today830a)) or ((now>today5p) and (now<=today530p))):
         disp.image(food_img)
     elif (((now>today9a)and(now<=today930a)) or ((now>today1p)and(now<=today130p)) or ((now>today630p)and(now<=today730p))):
         disp.image(walk_img)
