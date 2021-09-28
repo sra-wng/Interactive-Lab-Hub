@@ -219,12 +219,12 @@ Sketches of these interactions:
 
 # Lab 2 Part 2
 
-Pull Interactive Lab Hub updates to your repo.
+For part 2, I kept the approach of a task-oriented clock for dog owners. I aimed to clean up the images, better illustrate the passing of time, include more interaction with the buttons, and make the clock more informative. A second round of sketching and ideas is included below.
 
-Modify the code from last week's lab to make a new visual interface for your new clock. You may [extend the Pi](Extending%20the%20Pi.md) by adding sensors or buttons, but this is not required.
+![sketches](sketches_pt2.png "Another Round of Idea Sketches")
 
-As always, make sure you document contributions and ideas from others explicitly in your writeup.
+In my final implementation, I included some of what I had sketched out and also made some modifications. Rather rather than having a progress bar and an image display on the same "default" screen, I had just the static image representing the task on the "default" screen while the progress bar (and the current time) could be accessed through pressing one of the buttons. I felt that the limitations of the screen size made combining both the static image and a progress bar on one screen too busy, Additionally, rather than using the other button to skip to the next task, I used that button for displaying text information (as I had planned in my sketches). Marking tasks as completed or skipping tasks could be incorporated in future work. Finally, in accordance with my sketches, I displayed the text schedule of tasks when both buttons were pressed.
 
-You are permitted (but not required) to work in groups and share a turn in; you are expected to make equal contribution on any group work you do, and N people's group project should look like N times the work of a single person's lab. What each person did should be explicitly documented. Make sure the page for the group turn in is linked to your Interactive Lab Hub page. 
+See the video of my PiClock [here](https://drive.google.com/file/d/1ZjWAoX5aS2AZeCgXKkWyNOY-r-7xLM7N/view?usp=sharing).
 
-
+Rohan Reddy and Meyhaa Buvanesh helped me come up with ideas for improving my clock.
