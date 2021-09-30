@@ -54,7 +54,7 @@ Now, you might wonder what exactly is a `.sh` file? Typically, a `.sh` file is a
 You can also play audio files directly with `aplay filename`. Try typing `aplay lookdave.wav`.
 
 \*\***Write your own shell file to use your favorite of these TTS engines to have your Pi greet you by name.**\*\*
-(This shell file should be saved to your own repo for this lab.)
+See my_shell_GoogleTTS.sh in this repo.
 
 Bonus: If this topic is very exciting to you, you can try out this new TTS system we recently learned about: https://github.com/rhasspy/larynx
 
@@ -67,6 +67,8 @@ In particular, look at `test_words.py` and make sure you understand how the voca
 One thing you might need to pay attention to is the audio input setting of Pi. Since you are plugging the USB cable of your webcam to your Pi at the same time to act as speaker, the default input might be set to the webcam microphone, which will not be working for recording.
 
 \*\***Write your own shell file that verbally asks for a numerical based input (such as a phone number, zipcode, number of pets, etc) and records the answer the respondent provides.**\*\*
+
+My shell file is my_speech_to_text.sh and uses my_vosk_engine.py.
 
 Bonus Activity:
 
