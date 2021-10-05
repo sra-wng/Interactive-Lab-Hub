@@ -105,15 +105,29 @@ Storyboard and/or use a Verplank diagram to design a speech-enabled device. (Stu
 
 \*\***Post your storyboard and diagram here.**\*\*
 
+My device is an assistant that helps the user take better care of themselves when they're working at their desk. The assistant monitors the user, tracking when they step away from their desk, their posture, water intake, etc. It then provides reminders to drink water, take breaks, sit up straight, etc. My work for the first part of this lab will focus on water intake.
+
+Introducing the user persona and device:
+![intro](Storyboard_1.jpg "User Persona and Device")
+
+Storyboard:
+![scenario](Storyboard_2.jpg "Water Intake Scenario")
+
 Write out what you imagine the dialogue to be. Use cards, post-its, or whatever method helps you develop alternatives or group responses. 
 
 \*\***Please describe and document your process.**\*\*
 
+To map out the dialogue, I used OneNote with my tablet. This gave me the flexibility to list out possible responses, move the chunks of dialogue around, group them, and add directional arrows to show the flow of the dialogue.
+
+![dialogue](Dialogue.PNG "Mapped Dialogue")
+
 ### Acting out the dialogue
 
-Find a partner, and *without sharing the script with your partner* try out the dialogue you've designed, where you (as the device designer) act as the device you are designing.  Please record this interaction (for example, using Zoom's record feature).
+A recording of the acted-out dialogue is [here](https://drive.google.com/file/d/15vdRknuGdh9ebwcPG_VIaepM7xr7gnif/view?usp=sharing).
 
 \*\***Describe if the dialogue seemed different than what you imagined when it was acted out, and how.**\*\*
+
+Overall the dialogue was what I expected. However, as I was acting as the device, I felt the need to provide feedback when my actor completed the task I wanted. I had not originally planned for any feedback after the user responded affirmatively and drank some water, but wound up throwing in a "Good job!" to make the overall interaction feel more natural and personable.
 
 ### Wizarding with the Pi (optional)
 In the [demo directory](./demo), you will find an example Wizard of Oz project. In that project, you can see how audio and sensor data is streamed from the Pi to a wizard controller that runs in the browser.  You may use this demo code as a template. By running the `app.py` script, you can see how audio and sensor data (Adafruit MPU-6050 6-DoF Accel and Gyro Sensor) is streamed from the Pi to a wizard controller that runs in the browser `http://<YouPiIPAddress>:5000`. You can control what the system says from the controller as well!
