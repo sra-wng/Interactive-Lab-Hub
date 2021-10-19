@@ -175,11 +175,9 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
-![sketches](img/partc_sketches_1.jpg "sketches 1 and 2")
-
-![sketches](img/partc_sketches_2.jpg "sketches 3 and 4")
-
-![sketches](img/partc_sketches_3.jpg "sketch 5")
+<p align="center"> <img src="img/partc_sketches_1.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partc_sketches_2.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partc_sketches_3.jpg"  width="650" ></p>
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
@@ -229,9 +227,8 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
-![sketches](img/partd_sketches_1.jpg "sketches 1 to 3")
-
-![sketches](img/partd_sketches_2.jpg "sketches 4 and 5")
+<p align="center"> <img src="img/partd_sketches_1.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partd_sketches_2.jpg"  width="650" ></p>
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
@@ -251,28 +248,25 @@ Build a cardbord prototype of your design.
 
 Unfolded cardboard prototype:
 
-![proto_open](img/proto_open.jpeg "unfolded cardboard prototype")
-
-![proto_open_display](img/proto_open_display.jpeg "unfolded cardboard prototype with display")
-
+<p align="center"> <img src="img/proto_open.jpeg"  width="650" ></p>
+<p align="center"> <img src="img/proto_open_display.jpeg"  width="650" ></p>
 
 Folded protoype from different angles:
 
 Front
-![proto_folded_front](img/proto_folded_front.jpeg "folded prototype - front")
+<p align="center"> <img src="img/proto_folded_front.jpeg"  width="650" ></p>
 
 Front with display and joystick
-![proto_folded_front_display](img/proto_folded_front_display.jpeg "folded prototype - front with display")
+<p align="center"> <img src="img/proto_folded_front_display.jpeg"  width="650" ></p>
 
 Back
-![proto_folded_back](img/proto_folded_back.jpeg "folded prototype - back")
+<p align="center"> <img src="img/proto_folded_back.jpeg"  width="650" ></p>
 
 Bottom
-![proto_folded_bottom](img/proto_folded_bottom.jpeg "folded prototype - bottom")
+<p align="center"> <img src="img/proto_folded_bottom.jpeg"  width="650" ></p>
 
 Top
-![proto_folded_top](img/proto_folded_top.jpeg "folded prototype - top")
-
+<p align="center"> <img src="img/proto_folded_top.jpeg"  width="650" ></p>
 
 Notes and reflections after making the rough prototype:
 - The joystick can be used as both the button for selecting the color and for adjusting the color, so I modified my design to remove the additional button.
