@@ -229,11 +229,21 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+![sketches](partd_sketches_1.jpg "sketches 1 to 3")
+
+![sketches](partd_sketches_2.jpg "sketches 4 and 5")
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+Some key questions that came up include how to balance the need for a compact size and an ergonomic/comfortable/intuitive shape to hold/use the device, where to place the display to view the output most comfortably, where to place the interactive components, how to make the pi easily removable to make adjustments, and make sure that the weight of the device feels balanced with the pi in it. To understand these, I need to prototype the overall shape of the device, surfaces for the display, and surfaces for the interactive pieces. 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I plan to integrate the third display design into my prototype.
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+My rationale is that the device should be as compact as possible since it is meant to be a portable, handheld device that someone could use going about their day when they see objects/surfaces with interseting colors. The form will hopefully feel familiar, since I aim to model it after a remote, with the interactive components on the surface of the device and the sensor at the front of the device. The display on the surface should also help users easily see the information picked up from the sensor.
 
 Build a cardbord prototype of your design.
 
