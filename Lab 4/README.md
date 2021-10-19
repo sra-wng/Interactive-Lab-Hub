@@ -175,10 +175,19 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![sketches](partc_sketches_1.jpg "sketches 1 and 2")
+
+![sketches](partc_sketches_2.jpg "sketches 3 and 4")
+
+![sketches](partc_sketches_3.jpg "sketch 5")
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+The sketches raise the question of whether the sensor can be obstructed and still detect proximity, how to make sure the desired action is captured rather than something accidental, how to make a handheld/portable device actually handheld/portable/comfortable to use, where and how the device needs to be positioned to detect the desired signal, how to store the raspberry pi and power pack, and how to manage the aesthetics of the device. I would need to physically prototype placement for the sensor, storage for the device, and the shape and positioning of the device.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I will prototype the handheld color picker device.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
