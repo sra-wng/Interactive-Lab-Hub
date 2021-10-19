@@ -175,11 +175,11 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
-![sketches](partc_sketches_1.jpg "sketches 1 and 2")
+![sketches](img/partc_sketches_1.jpg "sketches 1 and 2")
 
-![sketches](partc_sketches_2.jpg "sketches 3 and 4")
+![sketches](img/partc_sketches_2.jpg "sketches 3 and 4")
 
-![sketches](partc_sketches_3.jpg "sketch 5")
+![sketches](img/partc_sketches_3.jpg "sketch 5")
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
@@ -229,9 +229,9 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
-![sketches](partd_sketches_1.jpg "sketches 1 to 3")
+![sketches](img/partd_sketches_1.jpg "sketches 1 to 3")
 
-![sketches](partd_sketches_2.jpg "sketches 4 and 5")
+![sketches](img/partd_sketches_2.jpg "sketches 4 and 5")
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
 
@@ -249,6 +249,38 @@ Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+Unfolded cardboard prototype:
+
+![proto_open](img/proto_open.jpeg "unfolded cardboard prototype")
+
+![proto_open_display](img/proto_open_display.jpeg "unfolded cardboard prototype with display")
+
+
+Folded protoype from different angles:
+
+Front
+![proto_folded_front](img/proto_folded_front.jpeg "folded prototype - front")
+
+Front with display and joystick
+![proto_folded_front_display](img/proto_folded_front_display.jpeg "folded prototype - front with display")
+
+Back
+![proto_folded_back](img/proto_folded_back.jpeg "folded prototype - back")
+
+Bottom
+![proto_folded_bottom](img/proto_folded_bottom.jpeg "folded prototype - bottom")
+
+Top
+![proto_folded_top](img/proto_folded_top.jpeg "folded prototype - top")
+
+
+Notes and reflections after making the rough prototype:
+- The joystick can be used as both the button for selecting the color and for adjusting the color, so I modified my design to remove the additional button.
+- The overall shape and size felt decent, with the front surface about the size of an iPhone. The prototype is deeper to fit the hardware. Weight was also okay, although it felt a little light. The position of the joystick felt natural and easily accessible for my thumb, and the display position seemed reasonable.
+- My initial design did not account for the combined height of the sensors/display and the internal pi--I had only considered the pi.
+- I also did not consider how to secure the sensors/display. I will need to pay attention to the heights of the various pieces on the sensors/display as well as the heights of the components relative to each other.
+- I need to consider where to include a slot for the power cord for the pi, given the orientation I expect the device to be used in and the location of the opening for the power cable on the pi
+- My initial design also did not consider the angle with which someone might point the device. The current shape forces the user to have the device perpendicular to the surface they want to find out the color of. I attempted to modify my prototype to have the device be slanted at the top so that the device could be used more naturally. I also attempted to limit the surface area at the top so that it would be obvious which part of the device needed to be pointed at the surface. I had already the cut the coardboard to be too small, so my next iteration will incorporate these improvements
 
 LAB PART 2
 
