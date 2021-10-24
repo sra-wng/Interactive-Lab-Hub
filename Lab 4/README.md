@@ -103,14 +103,14 @@ We here want you to get to know this awesome sensor [Adafruit APDS-9960](https:/
 
 <img src="https://cdn-shop.adafruit.com/970x728/3595-03.jpg" width=200>
 
-Connect it to your pi with Qwiic connector and try running the 3 example scripts individually to see what the sensor is capable of doing!
+Connect it to your pi with Qwiic connector and try running the three example scripts individually to see what the sensor is capable of doing!
 
 ```
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python light_test.py
-...
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python proximity_test.py
 ...
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python gesture_test.py
+...
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python color_test.py
 ...
 ```
 
@@ -175,10 +175,17 @@ Usually, sensors need to positioned in specific locations or orientations to mak
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+<p align="center"> <img src="img/partc_sketches_1.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partc_sketches_2.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partc_sketches_3.jpg"  width="650" ></p>
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+The sketches raise the question of whether the sensor can be obstructed and still detect proximity, how to make sure the desired action is captured rather than something accidental, how to make a handheld/portable device actually handheld/portable/comfortable to use, where and how the device needs to be positioned to detect the desired signal, how to store the raspberry pi and power pack, and how to manage the aesthetics of the device. I would need to physically prototype placement for the sensor, storage for the device, and the shape and positioning of the device.
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
 
+I will prototype the handheld color picker device.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
@@ -220,16 +227,54 @@ Think about how you want to present the information about what your sensor is se
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
 
+<p align="center"> <img src="img/partd_sketches_1.jpg"  width="650" ></p>
+<p align="center"> <img src="img/partd_sketches_2.jpg"  width="650" ></p>
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+
+Some key questions that came up include how to balance the need for a compact size and an ergonomic/comfortable/intuitive shape to hold/use the device, where to place the display to view the output most comfortably, where to place the interactive components, how to make the pi easily removable to make adjustments, and make sure that the weight of the device feels balanced with the pi in it. To understand these, I need to prototype the overall shape of the device, surfaces for the display, and surfaces for the interactive pieces. 
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+I plan to integrate the third display design into my prototype.
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
+
+My rationale is that the device should be as compact as possible since it is meant to be a portable, handheld device that someone could use going about their day when they see objects/surfaces with interseting colors. The form will hopefully feel familiar, since I aim to model it after a remote, with the interactive components on the surface of the device and the sensor at the front of the device. The display on the surface should also help users easily see the information picked up from the sensor.
 
 Build a cardbord prototype of your design.
 
 **\*\*\*Document your rough prototype.\*\*\***
 
+Unfolded cardboard prototype:
+
+<p align="center"> <img src="img/proto_open.jpeg"  width="650" ></p>
+<p align="center"> <img src="img/proto_open_display.jpeg"  width="650" ></p>
+
+Folded protoype from different angles:
+
+Front
+<p align="center"> <img src="img/proto_folded_front.jpeg"  width="650" ></p>
+
+Front with display and joystick
+<p align="center"> <img src="img/proto_folded_front_display.jpeg"  width="650" ></p>
+
+Back
+<p align="center"> <img src="img/proto_folded_back.jpeg"  width="650" ></p>
+
+Bottom
+<p align="center"> <img src="img/proto_folded_bottom.jpeg"  width="650" ></p>
+
+Top
+<p align="center"> <img src="img/proto_folded_top.jpeg"  width="650" ></p>
+
+Notes and reflections after making the rough prototype:
+- The joystick can be used as both the button for selecting the color and for adjusting the color, so I modified my design to remove the additional button.
+- The overall shape and size felt decent, with the front surface about the size of an iPhone. The prototype is deeper to fit the hardware. Weight was also okay, although it felt a little light. The position of the joystick felt natural and easily accessible for my thumb, and the display position seemed reasonable.
+- My initial design did not account for the combined height of the sensors/display and the internal pi--I had only considered the pi.
+- I also did not consider how to secure the sensors/display. I will need to pay attention to the heights of the various pieces on the sensors/display as well as the heights of the components relative to each other.
+- I need to consider where to include a slot for the power cord for the pi, given the orientation I expect the device to be used in and the location of the opening for the power cable on the pi
+- My initial design also did not consider the angle with which someone might point the device. The current shape forces the user to have the device perpendicular to the surface they want to find out the color of. I attempted to modify my prototype to have the device be slanted at the top so that the device could be used more naturally. I also attempted to limit the surface area at the top so that it would be obvious which part of the device needed to be pointed at the surface. I had already the cut the coardboard to be too small, so my next iteration will incorporate these improvements
 
 LAB PART 2
 
@@ -242,7 +287,7 @@ Following exploration and reflection from Part 1, complete the "looks like," "wo
 
 In the class kit, you should be able to find the [Qwiic Servo Controller](https://www.sparkfun.com/products/16773) and [Micro Servo Motor SG51](https://www.adafruit.com/product/2201). The Qwiic Servo Controller will need external power supply to drive, which we will be distributing the battery packs in the class. Connect the servo controller to the miniPiTFT through qwiic connector and connect the external battery to the 2-Pin JST port (ower port) on the servo controller. Connect your servo to channel 2 on the controller, make sure the brown is connected to GND and orange is connected to PWM.
 
-<img src="https://media.discordapp.net/attachments/724643465270657044/897305085372141579/image0.jpg"  width="200"/>
+<img src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.15752-9/245605956_303690921194525_3309212261588023460_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=ae9488&_nc_ohc=FvFLlClTKuUAX9nJ3LR&_nc_ht=scontent-lga3-1.xx&oh=b7ec1abc8d458b6c1b7a00a6f11398ac&oe=618D7D96" width="400"/>
 
 In this exercise, we will be using the nice [ServoKit library](https://learn.adafruit.com/16-channel-pwm-servo-driver/python-circuitpython) developed by Adafruit! We will continue to use the `circuitpython` virtual environment we created. Activate the virtual environment and make sure to install the latest required libraries by running:
 

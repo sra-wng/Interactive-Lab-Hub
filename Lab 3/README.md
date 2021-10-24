@@ -141,8 +141,18 @@ For Part 2, you will redesign the interaction with the speech-enabled device usi
 ## Prep for Part 2
 
 1. What are concrete things that could use improvement in the design of your device? For example: wording, timing, anticipation of misunderstandings...
+
+Concrete areas for improvement are improving the conversation flow by providing feedback when the user responds to something. Additionally, a user may not always naturally respond with verbal feedback and will instead nod/shake their head or otherwise user body language. Being able to react to body language would also improve the design.
+
 2. What are other modes of interaction _beyond speech_ that you might also use to clarify how to interact?
+
+Leveraging visual interactions could clarify how to interact. This could include using a display to output an image or text regarding a task to provide a visual mode of communication. This could also include using video input to evaluate the user's body language, gestures, and movements. Other possible interactions could include having the user use buttons to respond to the device's queries.
+
 3. Make a new storyboard, diagram and/or script based on these reflections.
+
+My new storyboard incorporates visual sensing via the webcam video feed as well as a visual display. Since my main dialogue change was adding basic feedback of "okay" or "good job" to user responses, I did not re-draw the diagram. I also added dialogue to ask for a repeat if input was not understood.
+
+![revised_storyboard](revised_storyboard.jpg "Revised Storyboard")
 
 ## Prototype your system
 
@@ -151,28 +161,47 @@ The system should:
 * use one or more sensors
 * require participants to speak to it. 
 
-*Document how the system works*
+The system uses the webcam's video to collect visual input and the USB microphone to take in audio speech input from the user. The audio input is processed using the VOSK Kaldi recognizer with a pre-defined dictionary. Video input is interpreted by the controller. The device must be placed in front of and facing the user to effectively take in the video input.
 
-*Include videos or screencaptures of both the system and the controller.*
+The control setup includes a terminal window and a video display input. The terminal window is used to execute Python scripts. The Python scripts execute shell scripts containing the TTS and STT functionality. Some scripts are also accompanied by code to display images to reinforce what is being verbally communicated by the device.
+
+The scripts created are:
+- [water_prompt.py](./water_prompt.py): this displays an image of a water droplet and asks the user if now is a good time to drink some water
+- [reminder_prompt.py](./reminder_prompt.py): this asks the user if they want to be reminded in 30 min to drink some water
+- [reminder_set.py](./reminder_set.py): this tells the user that a reminder has been set
+- [good_job.py](./good_job.py): this says "good job" to the user to provide feedback to the user
+- [okay.py](./okay.py): this says "okay" to the user to provide feedback to the user
+- [unknown_response.py](./unknown_response.py): this tells the user that the input was not understood and asks the user to repeat the input
+
+The image below shows the controller setup on the left and the system setup on the right.
+![setup](setup.jpg "Setup")
+
+The below videos show how the controller manages the system and the system's responses.
+- Water prompt: https://drive.google.com/file/d/1W4AlvwWzt3QYKa8ICSCYCsDFDrqvv1sb/view?usp=sharing
+- Other scripts: https://drive.google.com/file/d/1_Px2otTIR5jB_2jkGfWU8rNIsTl8YM79/view?usp=sharing
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
 
+Videos of my user interactions are below:
+- User 1: https://drive.google.com/file/d/1OP3bbHhlPZApddZCMfv_pMgYHki8fGRT/view?usp=sharing
+- User 2: https://drive.google.com/file/d/101JSn_SqasMflfk0vpjEc2RhMHTEmbqU/view?usp=sharing
+
 Answer the following:
 
 ### What worked well about the system and what didn't?
-\*\**your answer here*\*\*
+
+The visual display was clear and timely. The TTS system used was also relatively clear to understand. From a visual perspective, the system does not require the user to make any specific/unnatural movements. On the audio end, the time length of the recording when the system was waiting for input was much longer in some cases than the response users provided. Users weren't sure why there were long periods of silence and weren't sure how to engage with the system in this instances. The interaction could thus feel unnatural due to the stilted back-and-forth. The physical device (including webcam, pi, and usb microphone) were awkward to place to get good positioning such that the webcam was facing the user, the display on the pi was visible to the user, and the user could easily access the mic (to have it pick up sound).
 
 ### What worked well about the controller and what didn't?
 
-\*\**your answer here*\*\*
+Using the webcam's video functionality worked well for controlling the system since the input was reliable and could be easily interpreted by a human. It also felt like executing the scripts took more time than I wanted since I needed to type the command to execute the script. The hardcoded duration for recording audio input also felt uncomfortably long given the shorter responses that my participants provided. The audio processing also frequently did not interpret the speech correctly and I relied more heavily on visual signals from the video feed. Finally, executing pre-determined scripts did not provide flexibility for adjusting speech on the fly.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-\*\**your answer here*\*\*
-
+Hardcoding the interactions limits the ways that the system can interact with and respond to the user. It's also critical to come up with ways to make the interaction more seamless and real time -- even mere seconds can be too long and cause the interaction to feel unnatural. Being able to store user audio input and automatically decide how the system should respond (i.e. through NLP, ML prediction, etc) would allow for more autonomy with the system. Similarly, training and leveraging models to interpret visual input from video would allow for a more autonomous version of the system.
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-\*\**your answer here*\*\*
+The system could be used to create a dataset of interaction by recording and saving the audio inputs in the context of what prompts the audio was in response to. Video data could similarly be recorded and saved. Other sensing modalities that could be useful could include providing button/toggle input for users and sensing to track volume of water consumed over time. Future work to expand the system to other self-care tasks like improving posture or taking breaks could incorporate accelerometer and proximity sensors or even eye-tracking data.
 
