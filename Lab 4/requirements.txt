@@ -1,3 +1,5 @@
+#pip3 install -r requirements.txt
+
 Adafruit-Blinka==6.4.1
 adafruit-circuitpython-busdevice==5.0.6
 adafruit-circuitpython-framebuf==1.4.6
@@ -22,3 +24,5 @@ rpi-ws281x==4.2.6
 RPi.GPIO==0.7.0
 spidev==3.5
 sysv-ipc==1.1.0
+oled-text==1.2.3
+Pillow==8.1.1
