@@ -10,11 +10,13 @@ def sensor_setup():
     i2c_display = busio.I2C(board.SCL, board.SDA)
     oled = adafruit_ssd1306.SSD1306_I2C(128, 32, i2c_display)
     oled_text = OledText(i2c_display,128,32)
+    print("Oled display initialized.")
 
     # color sensor
     i2c = board.I2C()
     apds = APDS9960(i2c)
     apds.enable_color = True
+    print("APDS9960 sensor initialized. Color enabled.")
 
     # joystick
     myJoystick = qwiic_joystick.QwiicJoystick()
@@ -23,13 +25,13 @@ def sensor_setup():
             file=sys.stderr)
         exit()
     myJoystick.begin()
-    print("Initialized. Firmware Version: %s" % myJoystick.version)
+    print("Qwiic Joystick initialized. Firmware Version: %s" % myJoystick.version)
 
     # button
     myButton = qwiic_button.QwiicButton()
     if myButton.begin() == False:
             print("\nThe Qwiic Button isn't connected to the system. Please check your connection", file=sys.stderr)
-    print("\nButton ready!")
+    print("Qwiic button ready!")
 
     return myButton, myJoystick, apds, oled, oled_text
 
@@ -131,6 +133,7 @@ curr_color, color_locked = (-1,-1,-1), False
 button_press_count, prev_button_value = 0,1
 edit_button_press_count, edit_mode, prev_edit_button_value = 0, False, False
 myButton, myJoystick, apds, oled, oled_text = sensor_setup()
+brightness = 1
 
 #start with a blank screen
 oled.fill(0) 
@@ -146,6 +149,7 @@ while True:  #main loop
     button_press_count, prev_button_value = check_joystick_button_status(button_press_count, prev_button_value)
     
     edit_mode_entered = False
+    myButton.LED_off()
 
     # if the joystick button press count is odd, 
     # then lock the selected color and allow edit mode toggling
@@ -169,7 +173,7 @@ while True:  #main loop
         r_edit, g_edit, b_edit = r, g, b
         
         while edit_mode: #edit mode
-
+            myButton.LED_on(brightness)
             edit_mode_entered = True
             
             #allow channel-by-channel manual editing
@@ -190,9 +194,11 @@ while True:  #main loop
             time.sleep(2)
         elif edit_mode_entered:
             oled_text.text("No edits made", 1)
-            oled_text.text("Returning to", 2)
-            oled_text.text("selected color...", 3)
+            oled_text.text("", 2)
+            oled_text.text("Exiting...", 3)
             time.sleep(2)
+        
+        myButton.LED_off()
 
     # if the joystick button press count is even, then display sensing info
     else:
