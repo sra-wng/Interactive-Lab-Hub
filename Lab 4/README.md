@@ -103,14 +103,14 @@ We here want you to get to know this awesome sensor [Adafruit APDS-9960](https:/
 
 <img src="https://cdn-shop.adafruit.com/970x728/3595-03.jpg" width=200>
 
-Connect it to your pi with Qwiic connector and try running the three example scripts individually to see what the sensor is capable of doing!
+Connect it to your pi with Qwiic connector and try running the 3 example scripts individually to see what the sensor is capable of doing!
 
 ```
+(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python light_test.py
+...
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python proximity_test.py
 ...
 (circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python gesture_test.py
-...
-(circuitpython) pi@ixe00:~/Interactive-Lab-Hub/Lab 4 $ python color_test.py
 ...
 ```
 
@@ -318,4 +318,43 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
+
+For part 2, my initial goals for the cardboard protoype were to:
+- Account for the combined height of the sensors/display and the internal pi
+- Create a way to secure the sensors/display
+- Include a slot for the power cord for the pi, given the orientation I expect the device to be used in and the location of the opening for the power cable on the pi
+- Update the shape of the device (particularly the top) to make holding the device while trying to sense the color of an item more comfortable. The original design forces the user to hold the device perpendicularly, which strains the wrist. My revision will have the sensor on a slanted surface. The point will also taper to positioning of the device more intuitive.
+
+*First Iteration*
+
+To secure the front sensors (oled display, joystick, and LED button), I created a "plate" that I could slide the sensors in and out, and remove/reattach the qwiic connectors easily if I needed to. The below displays the initial design with the joystick and oled display only; the LED button was added later.
+
+<p align="center"> 
+    <img src="img/innerplate/IMG_1836.jpeg"  width="300" >
+    <img src="img/innerplate/IMG_1837.jpeg"  width="300" >
+</p>
+
+To experiment with the design of the top of the device, I used notebook paper for a cheaper/easier way to figure out how the cardboard needed to be cut. 
+
+<p align="center"> 
+    <img src="img/devicetop/IMG_1838.jpeg"  width="300" >
+    <img src="img/innerplate/IMG_1839.jpeg"  width="300" >
+    <img src="img/innerplate/IMG_1871.jpg"  width="300" >
+</p>
+
+Images of the resulting assembled prototype for this iteration are below. I added a slot for the power cord and included flaps and slots to allow me to easily disassemble and re-assemble the prototype as needed. The design for the top actually ended up being simpler to allow for more flexibility in case I wanted to make changes.
+
+<p align="center"> 
+    <img src="img/innerplate/IMG_1859.jpeg"  width="300" >
+    <img src="img/innerplate/IMG_1860.jpeg"  width="300" >
+</p>
+<p align="center"> 
+    <img src="img/innerplate/IMG_1861.jpeg"  width="300" >
+    <img src="img/innerplate/IMG_1862.jpeg"  width="300" >
+</p>
+
+For the functionality, my goals were to:
+- Allow the user to select a sensed color and "lock" the sensor
+- Display the selected color and RGB values on the display
+- Allow the user to manually edit the selected color
 
