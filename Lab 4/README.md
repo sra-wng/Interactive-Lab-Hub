@@ -319,42 +319,84 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
+**Part 2 Goals** 
+
 For part 2, my initial goals for the cardboard protoype were to:
 - Account for the combined height of the sensors/display and the internal pi
 - Create a way to secure the sensors/display
 - Include a slot for the power cord for the pi, given the orientation I expect the device to be used in and the location of the opening for the power cable on the pi
 - Update the shape of the device (particularly the top) to make holding the device while trying to sense the color of an item more comfortable. The original design forces the user to hold the device perpendicularly, which strains the wrist. My revision will have the sensor on a slanted surface. The point will also taper to positioning of the device more intuitive.
 
-*First Iteration*
-
-To secure the front sensors (oled display, joystick, and LED button), I created a "plate" that I could slide the sensors in and out, and remove/reattach the qwiic connectors easily if I needed to. The below displays the initial design with the joystick and oled display only; the LED button was added later.
-
-<p align="center"> 
-    <img src="img/innerplate/IMG_1836.jpeg"  width="300" >
-    <img src="img/innerplate/IMG_1837.jpeg"  width="300" >
-</p>
-
-To experiment with the design of the top of the device, I used notebook paper for a cheaper/easier way to figure out how the cardboard needed to be cut. 
-
-<p align="center"> 
-    <img src="img/devicetop/IMG_1838.jpeg"  width="300" >
-    <img src="img/innerplate/IMG_1839.jpeg"  width="300" >
-    <img src="img/innerplate/IMG_1871.jpg"  width="300" >
-</p>
-
-Images of the resulting assembled prototype for this iteration are below. I added a slot for the power cord and included flaps and slots to allow me to easily disassemble and re-assemble the prototype as needed. The design for the top actually ended up being simpler to allow for more flexibility in case I wanted to make changes.
-
-<p align="center"> 
-    <img src="img/innerplate/IMG_1859.jpeg"  width="300" >
-    <img src="img/innerplate/IMG_1860.jpeg"  width="300" >
-</p>
-<p align="center"> 
-    <img src="img/innerplate/IMG_1861.jpeg"  width="300" >
-    <img src="img/innerplate/IMG_1862.jpeg"  width="300" >
-</p>
-
 For the functionality, my goals were to:
 - Allow the user to select a sensed color and "lock" the sensor
 - Display the selected color and RGB values on the display
 - Allow the user to manually edit the selected color
 
+**First Iteration**
+
+To secure the front sensors (oled display, joystick, and LED button), I created a "plate" that I could slide the sensors in and out, and remove/reattach the qwiic connectors easily if I needed to. The below displays the initial design with the joystick and oled display only; the LED button was added later.
+
+<p align="center"> 
+    <img src="img/pt2/innerplate/IMG_1836.jpeg"  width="300" >
+    <img src="img/pt2/innerplate/IMG_1837.jpeg"  width="300" >
+</p>
+
+To experiment with the design of the top of the device, I used notebook paper for a cheaper/easier way to figure out how the cardboard needed to be cut. 
+
+<p align="center"> 
+    <img src="img/pt2/devicetop/IMG_1838.jpeg"  width="300" >
+    <img src="img/pt2/devicetop/IMG_1839.jpeg"  width="300" >
+    <img src="img/pt2/devicetop/IMG_1871.jpg"  width="300" >
+</p>
+
+Images of the resulting assembled prototype for this iteration are below. I added a slot for the power cord and included flaps and slots to allow me to easily disassemble and re-assemble the prototype as needed. The design for the top actually ended up being simpler to allow for more flexibility in case I wanted to make changes.
+
+<p align="center"> 
+    <img src="img/pt2/int/IMG_1859.jpeg"  width="300" >
+    <img src="img/pt2/int/IMG_1860.jpeg"  width="300" >
+</p>
+<p align="center"> 
+    <img src="img/pt2/int/IMG_1861.jpeg"  width="300" >
+    <img src="img/pt2/int/IMG_1862.jpeg"  width="300" >
+</p>
+
+**Functionality**
+
+The code to run my device is [here](my_color_tool.py). 
+
+*How it Works*
+
+The device starts on "sensing" mode and displays the RGB values of what is being sensed. The user can press the joystick to select or "lock" a sensed color. Once a color is selected, the user can then press the LED button to enter "Edit Mode." The LED light turns on when in Edit Mode. In Edit Mode, the user can toggle between RGB channels by pressing the joystick. The user moves the joystick up or down to increase or decrease the value of the channel. To exit Edit Mode, the user presses the LED button again. The display indicates if changes were made then exits back to the selected color screen. The LED light turns off once Edit Mode has been exited. The RGB values displayed reflect any edits made. From there, the user can either enter Edit Mode again or press the joystick button to go back to sensing mode.
+
+*Changes from the Original Plan*
+
+For the most part, I was able to add the functionality I had planned. However, I was not able to display the selected color on the OLED -- when planning, I had not realized the OLED was monochromatic. Instead of displaying the selected color and the corresponding RGB values, I only displayed the selected RGB values. Similarly, my original plan was to use the joystick to edit the selected color the way one might use the below color picker. I wanted to have the color displayed and RGB values update real-time. Instead, I only displayed the updating RGB values. 
+
+<p align="center"> 
+    <img src="img/pt2/color_circle.jpeg"  width="300" >
+</p>
+
+Additionally, while coding the interactions to toggle between the different modes, I felt that it would be confusing to have only a single button to switch between the sensing/color selection modes, entering/exiting edit mode, and switching RGB channels while in edit mode. I decided to add in an additional button to toggle edit mode while still using the joystick button for switching between sensing/color selection and switching RGB channels while in edit mode.
+
+**Final Prototype**
+
+Images of my final prototype are included below.
+
+<p align="center"> 
+    <img src="img/pt2/final/IMG_1867.jpeg"  width="300" >
+    <img src="img/pt2/final/IMG_1868.jpeg"  width="300" >
+</p>
+<p align="center"> 
+    <img src="img/pt2/final/IMG_1869.jpeg"  width="300" >
+    <img src="img/pt2/final/IMG_1870.jpeg"  width="300" >
+</p>
+
+Videos of the functionality:
+- [Color sensing](https://drive.google.com/file/d/1Y3cx_vUm9MJortihdL2tlWG2VZ9m4Eow/view?usp=sharing)
+- [Color selection and editing](https://drive.google.com/file/d/1OfXZY6KUnS7EiPurfARvIxmBseQNDytU/view?usp=sharing)
+
+See a video of a user interacting with the device [here](https://drive.google.com/file/d/1aOBTpChue429T9g2xF7KUKpgWZgdfsBw/view?usp=sharing) 
+
+**Future Work**
+
+Given the limitations of the OLED display device used, future work could include using a color display to show the actual sensed colors. Additionally, an improvement on the device could be to save the selected/edited values to a database for later access. Finally, I noticed that the color sensor doesn't seem to work as well when the ambient lighting isn't bright (i.e. it only really works well in the daytime), so I would be interested in further exploring how that could be improved.
