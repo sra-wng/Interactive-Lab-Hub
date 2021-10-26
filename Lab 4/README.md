@@ -248,25 +248,22 @@ Build a cardbord prototype of your design.
 
 Unfolded cardboard prototype:
 
-<p align="center"> <img src="img/proto_open.jpeg"  width="650" ></p>
-<p align="center"> <img src="img/proto_open_display.jpeg"  width="650" ></p>
+<p align="center"> 
+ <img src="img/proto_open.jpeg"  width="300" >
+ <img src="img/proto_open_display.jpeg"  width="300" >
+</p>
 
-Folded protoype from different angles:
+Folded protoype:
 
-Front
-<p align="center"> <img src="img/proto_folded_front.jpeg"  width="650" ></p>
-
-Front with display and joystick
-<p align="center"> <img src="img/proto_folded_front_display.jpeg"  width="650" ></p>
-
-Back
-<p align="center"> <img src="img/proto_folded_back.jpeg"  width="650" ></p>
-
-Bottom
-<p align="center"> <img src="img/proto_folded_bottom.jpeg"  width="650" ></p>
-
-Top
-<p align="center"> <img src="img/proto_folded_top.jpeg"  width="650" ></p>
+<p align="center"> 
+ <img src="img/proto_folded_front.jpeg"  width="300" >
+ <img src="img/proto_folded_front_display.jpeg"  width="300" >
+</p>
+<p align="center"> 
+ <img src="img/proto_folded_back.jpeg"  width="300" >
+ <img src="img/proto_folded_bottom.jpeg"  width="300" >
+ <img src="img/proto_folded_top.jpeg"  width="300" >
+</p>
 
 Notes and reflections after making the rough prototype:
 - The joystick can be used as both the button for selecting the color and for adjusting the color, so I modified my design to remove the additional button.
@@ -319,7 +316,7 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
 
-**Part 2 Goals** 
+#### Part 2 Goals
 
 For part 2, my initial goals for the cardboard protoype were to:
 - Account for the combined height of the sensors/display and the internal pi
@@ -332,7 +329,7 @@ For the functionality, my goals were to:
 - Display the selected color and RGB values on the display
 - Allow the user to manually edit the selected color
 
-**First Iteration**
+#### First Iteration
 
 To secure the front sensors (oled display, joystick, and LED button), I created a "plate" that I could slide the sensors in and out, and remove/reattach the qwiic connectors easily if I needed to. The below displays the initial design with the joystick and oled display only; the LED button was added later.
 
@@ -360,7 +357,7 @@ Images of the resulting assembled prototype for this iteration are below. I adde
     <img src="img/pt2/int/IMG_1862.jpeg"  width="300" >
 </p>
 
-**Functionality**
+#### Functionality
 
 The code to run my device is [here](my_color_tool.py). 
 
@@ -378,7 +375,7 @@ For the most part, I was able to add the functionality I had planned. However, I
 
 Additionally, while coding the interactions to toggle between the different modes, I felt that it would be confusing to have only a single button to switch between the sensing/color selection modes, entering/exiting edit mode, and switching RGB channels while in edit mode. I decided to add in an additional button to toggle edit mode while still using the joystick button for switching between sensing/color selection and switching RGB channels while in edit mode.
 
-**Final Prototype**
+#### Final Prototype
 
 Images of my final prototype are included below.
 
@@ -391,12 +388,14 @@ Images of my final prototype are included below.
     <img src="img/pt2/final/IMG_1870.jpeg"  width="300" >
 </p>
 
+#### Interaction Videos
+
 Videos of the functionality:
 - [Color sensing](https://drive.google.com/file/d/1Y3cx_vUm9MJortihdL2tlWG2VZ9m4Eow/view?usp=sharing)
 - [Color selection and editing](https://drive.google.com/file/d/1OfXZY6KUnS7EiPurfARvIxmBseQNDytU/view?usp=sharing)
 
-See a video of a user interacting with the device [here](https://drive.google.com/file/d/1aOBTpChue429T9g2xF7KUKpgWZgdfsBw/view?usp=sharing) 
+Video of a user interacting with the device [here](https://drive.google.com/file/d/1aOBTpChue429T9g2xF7KUKpgWZgdfsBw/view?usp=sharing) 
 
-**Future Work**
+#### Future Work
 
 Given the limitations of the OLED display device used, future work could include using a color display to show the actual sensed colors. Additionally, an improvement on the device could be to save the selected/edited values to a database for later access. Finally, I noticed that the color sensor doesn't seem to work as well when the ambient lighting isn't bright (i.e. it only really works well in the daytime), so I would be interested in further exploring how that could be improved.
