@@ -335,6 +335,23 @@ Following exploration and reflection from Part 1, finish building your interacti
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
 
-For my second pass, I updated my model to exclude the 'looking at phone' class so that I could try to improve the classification of the other three labels. I incorporated more arm motions in not slouching and slouching to try to help the system better distinguish when I was actually drinking water vs just having my arm raised/up for whatever reason.
+For my second pass, I updated my model to exclude the 'looking at phone' class so that I could try to improve the classification of the other three labels. I incorporated more arm motions in not slouching and slouching to try to help the system better distinguish when I was actually drinking water vs just having my arm raised/up for whatever reason. Despite this, as I was working on the code, I found that my model's classification performance seemed to change as time passed. I believe this was due to changes related to image quality such as lighting. The model began only primarily classifying slouching and drinking water. After a few attempts at retraining my model, I changed the model to only classify if I was slouching, and considered everything else to be not slouching.
 
-As for the output, rather than outputting every single classification as I was before, I updated the system to 'interpret' the classifications to something more useful to the user. For drinking water, I updated the system to notify the user when they *hadn't* been classified as drinking water in the last twenty minutes. I also updated the system to only nudge the user to stop slouching if they had been slouching for a minute to avoid overly frequent notifications.
+As for the output, rather than outputting every single classification as I was before, I updated the system to 'interpret' the classifications to something more useful to the user. I had the system only nudge the user to stop slouching if they had been slouching for a set amount of frames to avoid overly frequent notifications. I also tried to account for potential misclassifications within that window by setting the system up such that only 95% of the classifications within the time window had to be 'slouching.' To disable the notification, the user had to be classified as anything other than 'slouching' for at least ten consecutive frames.
+
+For the setup:
+
+When the system was on and sensing, the webcam and button would have lights indicating that they are on. The webcam needs to be placed to replicate the positioning of the camera used to train the model. The button needs to be placed in a visible location.
+<p align="center"><img src="img/button_off.jpeg"  width="650" ></p>
+
+When the user has been slouching for the pre-determined amount of time, the button LED light turns on. It turns off when the user is classified as not slouching for a set amount of time.
+<p align="center"><img src="img/button_on.jpeg"  width="650" ></p>
+
+Interaction video:
+
+https://drive.google.com/file/d/1hYJI0DL6L-IZKMJCpwsqwlCBdXzjiuOR/view?usp=sharing
+
+Reflections:
+- Training the model was much harder than expected, even when only using images of myself in the same location of my apartment as the train and test images. Future work could include training the model more comprehensively to make the model more robust.
+- Because of the challenges of training, I wasn't able to have my model classify drinking water and looking at phone. It would be great to include those categories and others in the future.
+- It would be interesting to use this model for a longer period of time (e.g. several hours) with a user to better understand how they would interact with the system. In particular, I would want to understand their reactions to the timings of when the LED light is enabled and disabled.
