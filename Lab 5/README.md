@@ -289,12 +289,17 @@ For example:
 
 When I actually implemented my model, I found that it only really outputted classifications as slouching and not slouching, despite the training input of drinking water and looking at my phone. It outputted slouching vs not slouching regardless of whether I had a bottle/cup in hand -- I simply could not figure out a way to get it to output drinking water or looking at my phone. While it outputted both slouching and not slouching, it generally tended to misclassify most things as slouching. This suggests that the system isn't sufficiently trained and that there is a disconnect between performance on the Teachable Machines website and actual implementation.
 
-<p align="center"> 
-    <img src="img/c1.png"  width="250" >
-    <img src="img/c2.png"  width="250" >
-    <img src="img/c3.png"  width="250" >
-    <img src="img/c4.png"  width="250" >
-</p>
+Slouching
+<p align="center"><img src="img/c1.png"  width="650" ></p>
+
+Not slouching
+<p align="center"><img src="img/c2.png"  width="650" ></p>
+
+Drinking water
+<p align="center"><img src="img/c3.png"  width="650" ></p>
+
+Looking at phone
+<p align="center"><img src="img/c4.png"  width="650" ></p>
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
