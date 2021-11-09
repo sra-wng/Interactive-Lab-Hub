@@ -1,4 +1,3 @@
-0 not_slouching
-1 slouching
-2 drinking_water
-3 looking_at_phone
+0 slouching
+1 not slouching
+2 drinking water
