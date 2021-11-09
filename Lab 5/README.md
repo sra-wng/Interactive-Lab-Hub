@@ -237,13 +237,14 @@ I wanted to try extending my Lab 3. This was a desktop assistant that helped the
 For this part of the lab, I use Teachable Machines to classify when the user is attentive and not slouching, slouching, drinking water, and looking at their phone.
 
 Overall:
-- All images were taken in the same time period with similar lighting, the same person, and overall the same clothing and background
+- All training images were taken in the same time period with similar lighting, the same person, and overall the same clothing and background
 - I experimented with having my hair down and up
-- I experimented with wearing a t-shirt and a vest over my t-shirt
+- I experimented with wearing a t-shirt, a vest over my t-shirt and different colored shirt
+- I experimented with daytime vs nighttime lighting
 
 
 Slouching vs not slouching:
-- The key behavior I wantedd to capture was slouching
+- The key behavior I wanted to capture was slouching
 - After my initial tests failed, I realized that "Not slouching" encompasses more than just sitting up straight. it also could encompass a wide range of other positions/postures. E.g. leaning back, moving around/in different positions
 - I found that angle seemed to matter based on how I had trained my model
 
@@ -268,7 +269,7 @@ Drinking water:
 </p>
 
 Looking at phone:
-- This one was hard for the system to distinguish -- it mixed this up with slouching and drinking water
+- This one was hard for the system to classify -- it mixed this up with slouching and drinking water and rarely classified me as looking at my phone
 - My training images didn't take into account looking down at desk for other reason (e.g. writing on pen and paper, taking notes on ipad, etc)
 
 <p align="center"> 
@@ -309,7 +310,7 @@ Looking at phone
 
 The idea is to nudge the user to sit up straight when slouching -- given that the system appears to be overclassifying most things as slouching, the user would likely receive so many nudges that they would become irritated and stop using the system or learn to ignore the system. A user might find it obvious that the system isn't working as expected -- after all, if they're not slouching and the system is telling them that they're slouching, the user would know that something is wrong. While nothing bad would happen to the user due to a misclassification, this would be irritating and could cause the user to stop using the device. Furthermore, the system fails to provide any meaningful information for the other two classes -- drinking water and looking at phone. Since both of these are incorrectly being classified as slouching, a user won't have their water-drinking tracked and won't be nudged to stop looking at their phone when they're doing so. 
 
-The biggest change to the system would be to improve the training data for the system. Perhaps because the changes are either relatively minute (slouching vs not slouching vs looking at phone) or could result in many varied positions (drinking water), a more diverse and varied dataset is needed to train the model. Another optimization could be to allow the user to provide feedback when something has been misclassified to improve the system.
+The biggest change to the system would be to improve the training data for the system. Perhaps because the changes are either relatively minute (slouching vs not slouching vs looking at phone) or could result in many varied positions (drinking water), a more diverse and varied dataset is needed to train the model. Alternatively, a change could be to be more prescriptive about the positioning of the webcam or training with more angles. While experimenting, I realized that I had trained the Teachable MAchinese model with my laptop camera (directly in front of me) but my implemented model was using the pi webcam (slightly to my right and above). Another optimization could be to allow the user to provide feedback when something has been misclassified to improve the system.
 
 ### Part D
 ### Characterize your own Observant system
