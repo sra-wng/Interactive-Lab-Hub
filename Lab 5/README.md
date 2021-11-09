@@ -104,17 +104,21 @@ Contour Detection
 <p align="center"> <img src="img/a1.png"  width="650" ></p>
 Possible applications include image segmentation and detecting the presence of a user/entity.
 
+
 Face Detection
 <p align="center"> <img src="img/a2.png"  width="650" ></p>
 Possible applications include face authentication, taking photos/portraits, detecting the presence of a user, identifying people from images.
+
 
 Optical Flow
 <p align="center"> <img src="img/a3.png"  width="650" ></p>
 Possible applications include movement detection (e.g. for automatic lights) and robot navigation.
 
+
 Object Detection
 <p align="center"> <img src="img/a4.png"  width="650" ></p>
 A possible application could be for autonomous vehicles.
+
 
 #### MediaPipe
 
@@ -228,6 +232,51 @@ Try out different interaction outputs and inputs.
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+I wanted to try extending my Lab 3. This was a desktop assistant that helped the user take better care of themselves when working at their desk. The overall idea is that the assistant monitored the user, tracking when they stepped away from their desk, their posture, water intake, etc. It then provided reminders to drink water, take breaks, sit up straight, etc.
+
+For this part of the lab, I use Teachable Machines to classify when the user is attentive and not slouching, slouching, drinking water, and looking at their phone.
+
+Overall:
+- All images were taken in the same time period with similar lighting, the same person, and overall the same clothing and background
+- I experimented with having my hair down and up
+- I experimented with wearing a t-shirt and a vest over my t-shirt
+
+
+Slouching vs not slouching:
+- The key behavior I wantedd to capture was slouching
+- After my initial tests failed, I realized that "Not slouching" encompasses more than just sitting up straight. it also could encompass a wide range of other positions/postures. E.g. leaning back, moving around/in different positions
+- I found that angle seemed to matter based on how I had trained my model
+
+<p align="center"> 
+    <img src="img/b1.png"  width="250" >
+    <img src="img/b2.png"  width="250" >
+    <img src="img/b3.png"  width="250" >
+    <img src="img/b4.png"  width="250" >
+</p>
+
+Drinking water:
+- I primarily used a water bottle in the training images, and later also trained with a glass mug
+- System tended to classify me as drinking water when my arm was up, even if I wasn't holding a glass or bottle
+- System seemed to be overfitting based on arm/hand presence
+
+<p align="center"> 
+    <img src="img/b5.png"  width="250" >
+    <img src="img/b6.png"  width="250" >
+    <img src="img/b7.png"  width="250" >
+    <img src="img/b8.png"  width="250" >
+    <img src="img/b9.png"  width="250" >
+</p>
+
+Looking at phone:
+- This one was hard for the system to distinguish -- it mixed this up with slouching and drinking water
+- My training images didn't take into account looking down at desk for other reason (e.g. writing on pen and paper, taking notes on ipad, etc)
+
+<p align="center"> 
+    <img src="img/b10.png"  width="250" >
+    <img src="img/b11.png"  width="250" >
+    <img src="img/b12.png"  width="250" >
+</p>
+
 ### Part C
 ### Test the interaction prototype
 
@@ -238,11 +287,24 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
+When I actually implemented my model, I found that it only really outputted classifications as slouching and not slouching, despite the training input of drinking water and looking at my phone. It outputted slouching vs not slouching regardless of whether I had a bottle/cup in hand -- I simply could not figure out a way to get it to output drinking water or looking at my phone. While it outputted both slouching and not slouching, it generally tended to misclassify most things as slouching. This suggests that the system isn't sufficiently trained and that there is a disconnect between performance on the Teachable Machines website and actual implementation.
+
+<p align="center"> 
+    <img src="img/c1.png"  width="250" >
+    <img src="img/c2.png"  width="250" >
+    <img src="img/c3.png"  width="250" >
+    <img src="img/c4.png"  width="250" >
+</p>
+
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
 1. How bad would they be impacted by a miss classification?
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+The idea is to nudge the user to sit up straight when slouching -- given that the system appears to be overclassifying most things as slouching, the user would likely receive so many nudges that they would become irritated and stop using the system or learn to ignore the system. A user might find it obvious that the system isn't working as expected -- after all, if they're not slouching and the system is telling them that they're slouching, the user would know that something is wrong. While nothing bad would happen to the user due to a misclassification, this would be irritating and could cause the user to stop using the device. Furthermore, the system fails to provide any meaningful information for the other two classes -- drinking water and looking at phone. Since both of these are incorrectly being classified as slouching, a user won't have their water-drinking tracked and won't be nudged to stop looking at their phone when they're doing so. 
+
+The biggest change to the system would be to improve the training data for the system. Perhaps because the changes are either relatively minute (slouching vs not slouching vs looking at phone) or could result in many varied positions (drinking water), a more diverse and varied dataset is needed to train the model. Another optimization could be to allow the user to provide feedback when something has been misclassified to improve the system.
 
 ### Part D
 ### Characterize your own Observant system
