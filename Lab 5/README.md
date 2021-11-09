@@ -288,7 +288,7 @@ For example:
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
 
-When I actually implemented my model, I found that it only really outputted classifications as slouching and not slouching, despite the training input of drinking water and looking at my phone. It outputted slouching vs not slouching regardless of whether I had a bottle/cup in hand -- I simply could not figure out a way to get it to output drinking water or looking at my phone. While it outputted both slouching and not slouching, it generally tended to misclassify most things as slouching. This suggests that the system isn't sufficiently trained and that there is a disconnect between performance on the Teachable Machines website and actual implementation.
+When I actually implemented my model, I found that it only really outputted classifications as slouching, not slouching, and drinking water despite the training input of looking at my phone. While it outputted both slouching and not slouching, it seemed to misclassify slouching as not slouching more frequently. I saw similar issues of the system identifying a raised arm as drinking water as when I was training the model. 
 
 Slouching
 <p align="center"><img src="img/c1.png"  width="650" ></p>
@@ -334,3 +334,7 @@ https://drive.google.com/file/d/1TIjG328wqADbgN-jQY88AwECIeiV4FH7/view?usp=shari
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+For my second pass, I updated my model to exclude the 'looking at phone' class so that I could try to improve the classification of the other three labels. I incorporated more arm motions in not slouching and slouching to try to help the system better distinguish when I was actually drinking water vs just having my arm raised/up for whatever reason.
+
+As for the output, rather than outputting every single classification as I was before, I updated the system to 'interpret' the classifications to something more useful to the user. For drinking water, I updated the system to notify the user when they *hadn't* been classified as drinking water in the last twenty minutes. I also updated the system to only nudge the user to stop slouching if they had been slouching for a minute to avoid overly frequent notifications.
