@@ -1,0 +1,4 @@
+0 not slouching
+1 slouching
+2 drinking water
+3 looking at phone
