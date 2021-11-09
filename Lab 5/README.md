@@ -100,6 +100,22 @@ pi@ixe00:~/openCV-examples/object-detection $ python detect.py
 
 **\*\*\*Try each of the following four examples in the `openCV-examples`, include screenshots of your use and write about one design for each example that might work based on the individual benefits to each algorithm.\*\*\***
 
+Contour Detection
+<p align="center"> <img src="img/a1.png"  width="650" ></p>
+Possible applications include image segmentation and detecting the presence of a user/entity.
+
+Face Detection
+<p align="center"> <img src="img/a2.png"  width="650" ></p>
+Possible applications include face authentication, taking photos/portraits, detecting the presence of a user, identifying people from images.
+
+Optical Flow
+<p align="center"> <img src="img/a3.png"  width="650" ></p>
+Possible applications include movement detection (e.g. for automatic lights) and robot navigation.
+
+Object Detection
+<p align="center"> <img src="img/a4.png"  width="650" ></p>
+A possible application could be for autonomous vehicles.
+
 #### MediaPipe
 
 A more recent open source and efficient method of extracting information from video streams comes out of Google's [MediaPipe](https://mediapipe.dev/), which offers state of the art face, face mesh, hand pose, and body pose detection.
@@ -135,6 +151,11 @@ Each of the installs will take a while, please be patient. After successfully in
 Try the two main features of this script: 1) pinching for percentage control, and 2) "[Quiet Coyote](https://www.youtube.com/watch?v=qsKlNVpY7zg)" for instant percentage setting. Notice how this example uses hardcoded positions and relates those positions with a desired set of events, in `hand_pose.py` lines 48-53. 
 
 **\*\*\*Consider how you might use this position based approach to create an interaction, and write how you might use it on either face, hand or body pose tracking.\*\*\***
+
+<p align="center"> <img src="img/a5.png"  width="650" ></p>
+<p align="center"> <img src="img/a6.png"  width="650" ></p>
+
+Some applications for a position based approach could including teaching/learning ASL, emotion detection, posture detection (i.e. yoga, fitness, dance poses or positions), gestures for device control.
 
 (You might also consider how this notion of percentage control with hand tracking might be used in some of the physical UI you may have experimented with in the last lab, for instance in controlling a servo or rotary encoder.)
 
@@ -172,6 +193,14 @@ This might take a while to get fully installed. After installation, connect your
 
 **\*\*\*Whether you make your own model or not, include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.\*\*\***
 
+PPE Detection model
+<p align="center"> <img src="img/a8.png"  width="650" ></p>
+
+My own model -- slouching vs not slouching
+<p align="center"> <img src="img/a9.png"  width="650" ></p>
+<p align="center"> <img src="img/a10.png"  width="650" ></p>
+
+Teachables Machines allows the user to not have to define or know the explicit features that might be needed to classify the image into one category or another. This allows greater flexibility for what we can train Teachable Machines to classify compared to the other approaches (since those are limited by human knowledge/expertise), but requires greater care in thinking about and experimenting with the training data. You could use this to create your own classifier by scraping images from the web or otherwise collecting a variety of images to train different classification tasks.
 
 *Don't forget to run ```deactivate``` to end the Teachable Machines demo, and to reactivate with ```source tmachine/bin/activate``` when you want to use it again.*
 
@@ -229,6 +258,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+https://drive.google.com/file/d/1TIjG328wqADbgN-jQY88AwECIeiV4FH7/view?usp=sharing
 
 ### Part 2.
 
