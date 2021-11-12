@@ -55,11 +55,20 @@ sensor = adafruit_apds9960.apds9960.APDS9960(i2c)
 sensor.enable_color = True
 r, g, b, a = sensor.color_data
 
-topic = 'IDD/colors'
+def get_topic(client):
+    cmd1 = input('>> use default topic IDD/colors? (y/n): ')
 
-def on_connect(client, userdata, flags, rc):
-    print(f"connected with result code {rc}")
-    client.subscribe(topic)
+    if 'n' in cmd1:
+        cmd2 = input('>> existing topic: IDD/')
+
+        if ' ' in cmd2:
+            print('sorry white space is a no go for topics')
+        else:
+            topic = f"IDD/{cmd2}"
+    else:
+        topic = 'IDD/colors'
+    
+    return topic
 
 def on_message(client, userdata, msg):
     # if a message is recieved on the colors topic, parse it and set the color
@@ -68,9 +77,17 @@ def on_message(client, userdata, msg):
         draw.rectangle((0, 0, width, height*0.5), fill=color)
         disp.image(image)
 
+def on_connect(client, userdata, flags, rc):
+    print(f"connected with result code {rc}")
+    print(f"now subscribing to topic {topic}")
+    client.subscribe(topic)
+
 client = mqtt.Client(str(uuid.uuid1()))
 client.tls_set()
 client.username_pw_set('idd', 'device@theFarm')
+
+topic = get_topic(client)
+
 client.on_connect = on_connect
 client.on_message = on_message
 
