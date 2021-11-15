@@ -1,5 +1,9 @@
 # Little Interactions Everywhere
 
+### _**** Lab completed with Rohan Reddy and Meyhaa Buvanesh ****_
+
+README submitted for grading: https://github.com/meyhaa/Interactive-Lab-Hub/blob/Fall2021/Lab%206/README.md
+
 ## Prep
 
 1. Pull the new changes from the class interactive-lab-hub. (You should be familiar with this already!)
