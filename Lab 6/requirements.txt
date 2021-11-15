@@ -14,3 +14,5 @@ rpi-ws281x==4.2.6
 RPi.GPIO==0.7.0
 sysv-ipc==1.1.0
 adafruit-circuitpython-mpu6050
+adafruit-circuitpython-mpr121
+
